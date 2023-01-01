@@ -1,0 +1,7 @@
+i3
+i3-gaps
+nvim
+polybar
+compton
+rofi
+feh or nitrogen
