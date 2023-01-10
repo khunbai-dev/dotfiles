@@ -1,0 +1,3 @@
+# Section to add at the end of .bashrc or .zshrc file
+
+PS1="\s-\V [\w]\n \u > "
