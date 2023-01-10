@@ -10,7 +10,8 @@ o.relativenumber = true
 o.list = true
 o.listchars = {tab='»·', space='.', eol='¬'}
 --(v) Setting font here may not working as it follows terminal font.
-o.guifont = {"SpaceMono NFM", ":h10"}
+-- o.guifont = {"SpaceMono NFM", ":h10"}
+o.guifont = {"Hack NF", ":h10"}
 
 vim.cmd [[
   syntax on
