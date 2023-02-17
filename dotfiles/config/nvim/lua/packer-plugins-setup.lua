@@ -2,16 +2,16 @@
 -- Install your plugin here.
 --==============================================================================
 
-return require('packer').startup(function()
+return require('packer').startup(function(use)
   -- packer can manage itself (Package manager)
   use 'wbthomason/packer.nvim'
 
-
   -- LSP, LSP server management
   use {
+    "neovim/nvim-lspconfig",  -- Enable LSP
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
-    "neovim/nvim-lspconfig",
+    "jose-elias-alvarez/null-ls.nvim"  -- for formatters and linters
   }
 
   -- Cmp, Auto complete things
@@ -36,7 +36,6 @@ return require('packer').startup(function()
   -- airline
   --use 'vim-airline/vim-airline'
   --use 'vim-airline/vim-airline-themes'
-  
   -- lualine, status bar below
   use {
     'nvim-lualine/lualine.nvim',
@@ -59,7 +58,7 @@ return require('packer').startup(function()
   }
 
   -- Additional text objects via treesitter
-  use { 
+  use {
     'nvim-treesitter/nvim-treesitter-textobjects',
     after = 'nvim-treesitter',
   }
@@ -81,7 +80,6 @@ return require('packer').startup(function()
       require('nvim-treesitter.install').update({ with_sync = true })
     end,
   }
-
 
   -- vim-obsession, session save
   use 'tpope/vim-obsession'

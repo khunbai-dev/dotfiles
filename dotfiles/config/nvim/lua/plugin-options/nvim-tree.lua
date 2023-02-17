@@ -19,6 +19,7 @@ nvimtree.setup({
     mappings = {
       list = {
         { key = "h", action = "dir_up" },
+        { key = "l", action = "dir_down" },
       },
     },
   },

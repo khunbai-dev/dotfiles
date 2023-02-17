@@ -11,9 +11,6 @@
 ---
 L          <Leader> which normally is <space>
 
-#### -- Command
-:vsplit    Window vertical split
-
 #### -- Normal mode
 o          Enter insert mode at new below line
 S-o        Enter insert mode at new above line
@@ -52,3 +49,9 @@ L-p        Replace selected text with current clipboard
 A-k        Move selected text up
 A-j        Move selected text down
 L-L        Hop word
+
+#### -- Command
+:vsplit    Window vertical split
+:noh       Clear search highlight
+
+
