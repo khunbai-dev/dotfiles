@@ -25,18 +25,19 @@ return require('packer').startup(function()
     "saadparwaiz1/cmp_luasnip"  -- snippet completions
   }
 
-  -- Snippets
+  -- Snippets, snippet to use with auto complete
   use { "L3MON4D3/LuaSnip", commit = "8f8d493e7836f2697df878ef9c128337cbf2bb84" } --snippet engine
-  -- use { "rafamadriz/friendly-snippets", commit = "2be79d8a9b03d4175ba6b3d14b082680de1b31b1" } -- a bunch of snippets to use
+  use { "rafamadriz/friendly-snippets", commit = "2be79d8a9b03d4175ba6b3d14b082680de1b31b1" } -- a bunch of snippets to use
 
-  -- colorscheme
+  -- colorscheme, switch theme in `lua/plugin-options/color-theme.lua`
   use 'gruvbox-community/gruvbox'
+  use 'navarasu/onedark.nvim' -- Theme inspired by Atom
 
   -- airline
   --use 'vim-airline/vim-airline'
   --use 'vim-airline/vim-airline-themes'
   
-  -- lualine
+  -- lualine, status bar below
   use {
     'nvim-lualine/lualine.nvim',
     requires = {
@@ -45,10 +46,10 @@ return require('packer').startup(function()
     }
   }
 
-  -- hop
+  -- hop, jump to any where faster
   use {'phaazon/hop.nvim', branch = 'v2'}
 
-  -- nvim-tree
+  -- nvim-tree, file explorer
   use {
     'nvim-tree/nvim-tree.lua',
     requires = {
@@ -57,7 +58,13 @@ return require('packer').startup(function()
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
 
-  -- bufferline
+  -- Additional text objects via treesitter
+  use { 
+    'nvim-treesitter/nvim-treesitter-textobjects',
+    after = 'nvim-treesitter',
+  }
+
+  -- bufferline, tab page integration
   use {
     'akinsho/bufferline.nvim',
     tag = "v3.*",
@@ -66,6 +73,18 @@ return require('packer').startup(function()
 
   -- spec.nvim, cursor moving effect
   use {'edluffy/specs.nvim'}
+
+  -- treesitter, text highlighting
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = function()
+      require('nvim-treesitter.install').update({ with_sync = true })
+    end,
+  }
+
+
+  -- vim-obsession, session save
+  use 'tpope/vim-obsession'
 
 
 end)

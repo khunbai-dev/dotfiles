@@ -1,3 +1,15 @@
+-- check if cmp is installed
+local cmp_status, cmp = pcall(require, "cmp")
+if not cmp_status then
+  return
+end
+
+-- check if luasnip is installed
+local luasnip_status, luasnip = pcall(require, "luasnip")
+if not luasnip_status then
+  return
+end
+
 -- Set up nvim-cmp.
 local cmp = require'cmp'
 
@@ -31,6 +43,11 @@ local kind_icons = {
 }
 -- find more here: https://www.nerdfonts.com/cheat-sheet
 
+-- == LuaSnip settings =========================================================
+-- load rafamadriz/friendly-snippets
+require("luasnip/loaders/from_vscode").lazy_load()
+-- =============================================================================
+
 cmp.setup({
   snippet = {
     -- REQUIRED - you must specify a snippet engine
@@ -51,11 +68,14 @@ cmp.setup({
     },
   },
   mapping = cmp.mapping.preset.insert({
-    ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-    ['<C-f>'] = cmp.mapping.scroll_docs(4),
-    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-j>'] = cmp.mapping.select_next_item(),
+    ['<C-k>'] = cmp.mapping.select_prev_item(),
+    -- ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+    -- ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    -- ['<C-Space>'] = cmp.mapping.complete(),
     ['<C-e>'] = cmp.mapping.abort(),
-    ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+    ['<Tab>'] = cmp.mapping.confirm({ select = true }),
+    -- ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
   }),
   formatting = {
     fields = { "kind", "abbr", "menu" },
@@ -73,14 +93,14 @@ cmp.setup({
     end,
   },
   sources = cmp.config.sources({
-    { name = 'nvim_lsp' },
-    -- { name = 'vsnip' }, -- For vsnip users.
-    { name = 'luasnip' }, -- For luasnip users.
-    -- { name = 'ultisnips' }, -- For ultisnips users.
-    -- { name = 'snippy' }, -- For snippy users.
-  }, {
-    { name = 'buffer' },
-    { name = "path" },
+    -- Order here is matter. What comes first show first.
+    { name = 'nvim_lsp'},
+    { name = 'luasnip' },       -- For luasnip users.
+    -- { name = 'vsnip' },      -- For vsnip users.
+    -- { name = 'ultisnips' },  -- For ultisnips users.
+    -- { name = 'snippy' },     -- For snippy users.
+    { name = 'buffer' },        -- text within current buffer
+    { name = "path" },          -- file system paths
   })
 })
 
