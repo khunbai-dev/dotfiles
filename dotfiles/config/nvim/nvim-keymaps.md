@@ -26,8 +26,11 @@ C-h        Scroll left
 C-l        Scroll right
 S-h        Go to first character in line
 S-l        Go to last character in line
-*Command*
+*Jump*
 L-L        Hop word
+f-{letter} Search the character on the right
+F-{letter} Search the character on the left
+*Command*
 L-t        Open Nvim-tree explorer
 L-q        <:q> Exit
 L-Q        <:q!> Exit without save

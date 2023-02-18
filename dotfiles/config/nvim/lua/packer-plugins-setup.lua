@@ -11,6 +11,7 @@ return require('packer').startup(function(use)
     "neovim/nvim-lspconfig",  -- Enable LSP
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
+    "nvim-lua/plenary.nvim",  -- required by null-ls
     "jose-elias-alvarez/null-ls.nvim"  -- for formatters and linters
   }
 
