@@ -1,2 +1,3 @@
 # nvim session file
 **/Session.vim
+**/packer_compiled.lua
