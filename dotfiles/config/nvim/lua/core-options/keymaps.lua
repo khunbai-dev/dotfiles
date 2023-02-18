@@ -29,19 +29,18 @@ nmap('<S-k>', '<Nop>')
 nmap('U', '<C-r>')
 
 -- Vertical movement
-nmap('<C-j>', '<C-d>')  -- scrolling down
-nmap('<C-k>', '<C-u>')  -- scrolling up
+nmap('<S-j>', '<C-d>')  -- scrolling down
+nmap('<S-k>', '<C-u>')  -- scrolling up
 
 -- Horizontal movement
-nmap('<S-l>', '$')      -- go to right end of line
-nmap('<S-h>', '^')      -- go to first character of line
-nmap('<C-h>', '20zh')   -- Scrolling left
-nmap('<C-l>', '20zl')   -- scrolling right
+nmap('<Leader>l', '$')      -- go to right end of line
+nmap('<Leader>h', '^')      -- go to first character of line
+nmap('<S-h>', '20zh')   -- Scrolling left
+nmap('<S-l>', '20zl')   -- scrolling right
 
 -- Map to command
 nmap('<Space><Space>', '<cmd>HopWord<cr>')
 nmap('<Leader>w', ':w<Enter>')
-nmap('<C-s>', ':w<Enter>')      -- save like vscode
 nmap('<Leader>q', ':q<Enter>')
 nmap('<Leader>Q', ':q!<Enter>')
 nmap('<Leader>t', ':NvimTreeToggle<CR>')

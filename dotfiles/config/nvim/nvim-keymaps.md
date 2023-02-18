@@ -17,15 +17,15 @@ S-o        Enter insert mode at new above line
 u          Undo
 S-u        Redo
 *Vertical movement*
-C-j        Scroll down
-C-k        Scroll up
+S-j        Scroll down
+S-k        Scroll up
 gg         Go to first line of file
 S-g        Go to last line of file
 *Horizontal movement*
-C-h        Scroll left
-C-l        Scroll right
-S-h        Go to first character in line
-S-l        Go to last character in line
+S-h        Scroll left
+S-l        Scroll right
+L-h        Go to first character in line
+L-l        Go to last character in line
 *Jump*
 L-L        Hop word
 f-{letter} Search the character on the right
