@@ -19,7 +19,7 @@ S-u        Redo
 *Vertical movement*
 C-j        Scroll down
 C-k        Scroll up
-gg        Go to first line of file
+gg         Go to first line of file
 S-g        Go to last line of file
 *Horizontal movement*
 C-h        Scroll left
