@@ -45,6 +45,7 @@ nmap('<C-s>', ':w<Enter>')      -- save like vscode
 nmap('<Leader>q', ':q<Enter>')
 nmap('<Leader>Q', ':q!<Enter>')
 nmap('<Leader>t', ':NvimTreeToggle<CR>')
+nmap('<Leader>rl', ':source $MYVIMRC<CR>')
 
 -- exit to normal mode
 imap('ii', '<Esc>')
