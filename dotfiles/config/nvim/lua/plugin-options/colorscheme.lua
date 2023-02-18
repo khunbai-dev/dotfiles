@@ -8,6 +8,7 @@
 -- vim.cmd [[colorscheme onedark]]
 require('onedark').setup {
   style = 'warm',
+  transparent = false,  -- Show/hide background
   colors = {
     grey = '#494949',  -- Override comment color to get a little bit darker
   },
