@@ -38,6 +38,7 @@ L-w        <:w> Save
 L-ob       :Obsession, start tracking session or pausing tracking session
 L-ss       :source Session.vim, restore session from Session.vim
 L-rl       :source $MYVIMRC, reload nvim config
+L-\        :vsplit, vertical split plane
 
 #### -- Insert Mode
 ii         Exit to nornal mode

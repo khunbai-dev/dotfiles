@@ -4,11 +4,17 @@ local o = vim.opt
 o.number = true
 o.relativenumber = true
 
--- tab and indentation
+-- tab and indentation (This might overwrite by tree-sitter if installed)
+-- To check that which plugin or setting file is active use this command
+-- `:verbose setlocal ts? sts? et? sw?`
 o.tabstop = 2
 o.shiftwidth = 2
+o.softtabstop = 2
 o.expandtab = true
-o.autoindent = true
+o.autoindent = false
+o.smartindent = false
+o.cindent = false
+o.indentexpr = ""
 
 -- line wrapping
 o.wrap = false

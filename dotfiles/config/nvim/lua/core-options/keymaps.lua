@@ -45,6 +45,7 @@ nmap('<Leader>q', ':q<Enter>')
 nmap('<Leader>Q', ':q!<Enter>')
 nmap('<Leader>t', ':NvimTreeToggle<CR>')
 nmap('<Leader>rl', ':source $MYVIMRC<CR>')
+nmap('<Leader><Bslash>', ':vsplit<CR>')
 
 -- exit to normal mode
 imap('ii', '<Esc>')
