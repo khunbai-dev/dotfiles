@@ -22,8 +22,8 @@ local function vmap(shortcut, command)
 end
 
 -- Unbind keys
-nmap('<S-j>', '<Nop>')
-nmap('<S-k>', '<Nop>')
+--nmap('<S-j>', '<Nop>')
+--nmap('<S-k>', '<Nop>')
 
 -- Redo
 nmap('U', '<C-r>')
