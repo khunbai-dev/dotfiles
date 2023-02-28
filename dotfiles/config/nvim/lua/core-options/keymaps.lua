@@ -29,14 +29,14 @@ end
 nmap('U', '<C-r>')
 
 -- Vertical movement
-nmap('<S-j>', '<C-d>')  -- scrolling down
-nmap('<S-k>', '<C-u>')  -- scrolling up
+nmap('<C-j>', '<C-d>')  -- scrolling down
+nmap('<C-k>', '<C-u>')  -- scrolling up
 
 -- Horizontal movement
 nmap('<Leader>l', '$')  -- go to right end of line
 nmap('<Leader>h', '^')  -- go to first character of line
-nmap('<S-h>', '20zh')   -- Scrolling left
-nmap('<S-l>', '20zl')   -- scrolling right
+nmap('<C-h>', '20zh')   -- Scrolling left
+nmap('<C-l>', '20zl')   -- scrolling right
 
 -- Map to command
 nmap('<Space><Space>', '<cmd>HopWord<cr>')
@@ -46,6 +46,10 @@ nmap('<Leader>Q', ':q!<Enter>')
 nmap('<Leader>t', ':NvimTreeToggle<CR>')
 nmap('<Leader>rl', ':source $MYVIMRC<CR>')
 nmap('<Leader><Bslash>', ':vsplit<CR>')
+
+-- switch between split window
+nmap('<S-h>', '<C-W>h')
+nmap('<S-l>', '<C-W>l')
 
 -- exit to normal mode
 imap('ii', '<Esc>')

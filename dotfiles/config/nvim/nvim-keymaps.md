@@ -17,13 +17,13 @@ S-o        Enter insert mode at new above line
 u          Undo
 S-u        Redo
 *Vertical movement*
-S-j        Scroll down
-S-k        Scroll up
+C-j        Scroll down
+C-k        Scroll up
 gg         Go to first line of file
 S-g        Go to last line of file
 *Horizontal movement*
-S-h        Scroll left
-S-l        Scroll right
+C-h        Scroll left
+C-l        Scroll right
 L-h        Go to first character in line
 L-l        Go to last character in line
 *Jump*
@@ -39,6 +39,9 @@ L-ob       :Obsession, start tracking session or pausing tracking session
 L-ss       :source Session.vim, restore session from Session.vim
 L-rl       :source $MYVIMRC, reload nvim config
 L-\        :vsplit, vertical split plane
+*Switch between split window*
+S-l        Switch to right window
+S-h        Switch to left window
 
 #### -- Insert Mode
 ii         Exit to nornal mode
@@ -56,7 +59,6 @@ A-j        Move selected text down
 L-L        Hop word
 
 #### -- Command
-:vsplit    Window vertical split
 :noh       Clear search highlight
 
 
