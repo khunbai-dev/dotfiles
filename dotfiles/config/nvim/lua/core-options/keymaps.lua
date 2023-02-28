@@ -33,8 +33,8 @@ nmap('<C-j>', '<C-d>')  -- scrolling down
 nmap('<C-k>', '<C-u>')  -- scrolling up
 
 -- Horizontal movement
-nmap('<Leader>l', '$')  -- go to right end of line
-nmap('<Leader>h', '^')  -- go to first character of line
+nmap('fl', '$')  -- go to right end of line
+nmap('fh', '^')  -- go to first character of line
 nmap('<C-h>', '20zh')   -- Scrolling left
 nmap('<C-l>', '20zl')   -- scrolling right
 

@@ -24,8 +24,8 @@ S-g        Go to last line of file
 *Horizontal movement*
 C-h        Scroll left
 C-l        Scroll right
-L-h        Go to first character in line
-L-l        Go to last character in line
+fh        Go to first character in line
+fl        Go to last character in line
 *Jump*
 L-L        Hop word
 f-{letter} Search the character on the right
