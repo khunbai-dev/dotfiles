@@ -1,5 +1,10 @@
 #!/usr/bin/bash
 
+if [[ $(/usr/bin/id -u) -ne 0 ]]; then
+    echo "Please run the script with sudo or as root."
+    exit
+fi
+
 # == Read Passphrase with asterisk prompt =======================
 unset PASSPHRASE
 unset CHARCOUNT
@@ -37,18 +42,18 @@ stty echo
 # ==============================================================
 
 # decrypt luks partition, partion name please command `lsblk`
-echo -n "$PASSPHRASE" | sudo cryptsetup luksOpen /dev/sdb1 encrypted_vm_partition &&
-echo -n "$PASSPHRASE" | sudo cryptsetup luksOpen /dev/sdg4 encrypted_linux_space &&
+echo -n "$PASSPHRASE" | cryptsetup luksOpen /dev/sdb1 encrypted_vm_partition &&
+echo -n "$PASSPHRASE" | cryptsetup luksOpen /dev/sdg4 encrypted_linux_space &&
 
 unset PASSPHRASE
 
 # Create directory if not exist
-sudo mkdir -p /run/media/khunbai/qemu_images &&
-sudo mkdir -p /run/media/khunbai/Linux_space &&
+mkdir -p /run/media/khunbai/qemu_images &&
+mkdir -p /run/media/khunbai/Linux_space &&
 
 # Mount to a path and give permission to access
-sudo mount /dev/mapper/encrypted_vm_partition /run/media/khunbai/qemu_images &&
-sudo mount /dev/mapper/encrypted_linux_space /run/media/khunbai/Linux_space &&
-sudo chmod +x /run/media/khunbai
+mount /dev/mapper/encrypted_vm_partition /run/media/khunbai/qemu_images &&
+mount /dev/mapper/encrypted_linux_space /run/media/khunbai/Linux_space &&
+chmod +x /run/media/khunbai
 
 echo "  Mounting done!"
