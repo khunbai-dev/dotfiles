@@ -5,3 +5,5 @@ polybar
 compton
 rofi
 feh or nitrogen
+
+sudo dnf install --allowerasing i3-gaps nvim polybar compton rofi nitrogen
