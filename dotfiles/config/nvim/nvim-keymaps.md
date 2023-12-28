@@ -45,9 +45,11 @@ S-h        Switch to left window
 
 #### -- Insert Mode
 ii         Exit to nornal mode
+A-i        Exit to normal mode
 
 #### -- Visual Mode
 ii         Exit to normal mode
+A-i        Exit to normal mode
 d          Cut selected text
 L-d        Delete selected text
 y          Copy (local clipboard in nvim)

@@ -54,6 +54,8 @@ nmap('<S-l>', '<C-W>l')
 -- exit to normal mode
 imap('ii', '<Esc>')
 vmap('ii', '<Esc>')
+imap('<A-i>', '<Esc>')
+vmap('<A-i>', '<Esc>')
 
 -- hopword mode
 vmap('<Space><Space>', '<cmd>HopWord<cr>')
