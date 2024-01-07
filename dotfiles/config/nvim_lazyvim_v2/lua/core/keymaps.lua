@@ -1,4 +1,3 @@
---(v) move mapleader setting to /nvim/init.lua
 vim.g.mapleader = ' '
 
 local function map(mode, shortcut, command)
@@ -40,11 +39,11 @@ nmap('<C-h>', '20zh')   -- Scrolling left
 nmap('<C-l>', '20zl')   -- scrolling right
 
 -- Map to command
-nmap('f<Space>', '<cmd>HopWord<cr>')
 nmap('<Leader>w', ':w<Enter>')
 nmap('<Leader>q', ':q<Enter>')
 nmap('<Leader>Q', ':q!<Enter>')
 nmap('<Leader>t', ':NvimTreeToggle<CR>')
+nmap('<Leader>h', ':NvimTreeFocus<CR>')
 nmap('<Leader>rl', ':source $MYVIMRC<CR>')
 nmap('<Leader><Bslash>', ':vsplit<CR>')
 
@@ -59,11 +58,19 @@ imap('<A-i>', '<Esc>')
 vmap('<A-i>', '<Esc>')
 
 -- hopword mode
+nmap('f<Space>', '<cmd>HopWord<cr>')
+nmap('<Space><Space>', '<cmd>HopWord<cr>')
+vmap('f<Space>', '<cmd>HopWord<cr>')
 vmap('<Space><Space>', '<cmd>HopWord<cr>')
 
 -- move any selected text like Alt+arrow in vscode
 vmap('<A-j>', ":m '>+1<CR>gv=gv")
 vmap('<A-k>', ":m '<-2<CR>gv=gv")
+
+-- Telescope
+--vim.keymap.set("n", 'te', function() print(":Telescope ") end)
+nmap('teb', '<cmd>Telescope buffers<cr>')
+nmap('tef', '<cmd>Telescope find_files<cr>')
 
 -- delete selected text and paste without losing existing clipboard
 vim.keymap.set("x", "<leader>p", [["_dP]])
