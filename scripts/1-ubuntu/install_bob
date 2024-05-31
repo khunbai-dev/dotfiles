@@ -28,7 +28,6 @@ fi
 echo -e '\n# Bob setup' >> $SHELL_RC_FILE
 echo 'export PATH="$HOME/.cargo/bin:$PATH"' >> $SHELL_RC_FILE
 echo 'export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"' >> $SHELL_RC_FILE
-# echo 'eval "$(bob init)"' >> $SHELL_RC_FILE
 
 # Reload shell configuration
 source $SHELL_RC_FILE
