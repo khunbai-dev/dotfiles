@@ -16,6 +16,9 @@ if command -v npm &> /dev/null; then
   
   # Install unzip
   sudo apt install -y unzip
+
+  # Install clipboard tool
+  sudo apt install -y xclip
   
   # Set up fd symlink
   mkdir -p ~/.local/bin
