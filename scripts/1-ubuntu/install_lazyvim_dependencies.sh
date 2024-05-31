@@ -4,6 +4,9 @@
 if command -v npm &> /dev/null; then
   # Update package repository
   sudo apt update
+
+  # Install pip
+  sudo apt install -y python3-pip
   
   # Install ripgrep (rg)
   sudo apt install -y ripgrep
