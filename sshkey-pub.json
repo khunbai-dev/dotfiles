@@ -1,5 +1,10 @@
-{
-  "qemu": {
-    "fedora_dev": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAx6yWH0QNoS7SkjlP4PBAcPWrB1TbDXBWMBAHwt9Rvf khunbai@fedora36-dev-qemu"
+[
+  {
+    "name": "fedora36-dev-qemu",
+    "key": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAx6yWH0QNoS7SkjlP4PBAcPWrB1TbDXBWMBAHwt9Rvf khunbai@fedora36-dev-qemu"
+  },
+  {
+    "name": "macbook-pro",
+    "key": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJvrsoyFZYtbJFVUjHbeWy/RyRPSaTGg7WPhVB1qP7QS khunbai@fedora36-dev.qemu"
   }
-}
+]
