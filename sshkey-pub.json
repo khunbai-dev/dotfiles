@@ -1,5 +1,5 @@
 {
   "qemu": {
-    "fedora-dev": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAx6yWH0QNoS7SkjlP4PBAcPWrB1TbDXBWMBAHwt9Rvf khunbai@fedora36-dev-qemu"
+    "fedora_dev": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAx6yWH0QNoS7SkjlP4PBAcPWrB1TbDXBWMBAHwt9Rvf khunbai@fedora36-dev-qemu"
   }
 }
