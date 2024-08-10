@@ -57,12 +57,6 @@ vmap('ii', '<Esc>')
 imap('<A-i>', '<Esc>')
 vmap('<A-i>', '<Esc>')
 
--- hopword mode
-nmap('f<Space>', '<cmd>HopWord<cr>')
-nmap('<Space><Space>', '<cmd>HopWord<cr>')
-vmap('f<Space>', '<cmd>HopWord<cr>')
-vmap('<Space><Space>', '<cmd>HopWord<cr>')
-
 -- move any selected text like Alt+arrow in vscode
 vmap('<A-j>', ":m '>+1<CR>gv=gv")
 vmap('<A-k>', ":m '<-2<CR>gv=gv")
